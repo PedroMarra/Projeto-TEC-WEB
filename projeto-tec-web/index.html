@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Sabor & Arte | Início</title>
-
-    <link rel="stylesheet" href="./style.css">
-
     <link rel="stylesheet" href="./src/style.css">
-
 </head>
 <body>
     <header>
         <h1>Sabor & Arte</h1>
         <nav aria-label="Navegação Principal">
             <ul>
-                <li><a href="./index.html">Página Inicial</a></li>
-                <li><a href="./cadastro.html">Publicar Receita</a></li>
+                <li><a href="./index.html">Início</a></li>
                 <li><a href="./receitas.html">Ver Receitas</a></li>
+                <li id="area-login-nav"><button id="btn-abrir-login">Entrar</button></li>
+                <li id="area-logout-nav" style="display: none;">
+                    <span>Olá, <strong id="nome-usuario-logado"></strong></span>
+                    <button id="btn-logout">Sair</button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -25,14 +25,32 @@
         <section>
             <h2>Bem-vindo à nossa Cozinha!</h2>
             <br>
-            <p>O <strong>Sabor & Arte</strong> é uma comunidade para quem ama cozinhar. Aqui você pode salvar aquelas receitas de família, descobrir novos pratos e compartilhar seus segredos culinários com o mundo.</p>
-            <br>
-            <p>Utilize o menu acima para começar a navegar e explorar novos sabores.</p>
+            <p>O <strong>Sabor & Arte</strong> é uma comunidade para quem ama cozinhar. Para publicar suas próprias receitas, crie uma conta e faça o login!</p>
         </section>
+
+        <dialog id="modal-login" aria-label="Modal de Login">
+            <header>
+                <h2>Faça seu Login</h2>
+            </header>
+            <form id="form-login" aria-label="Formulário de Login">
+                <fieldset>
+                    <label for="login-email">E-mail:</label>
+                    <input type="email" id="login-email" required>
+                </fieldset>
+                <fieldset>
+                    <label for="login-senha">Senha:</label>
+                    <input type="password" id="login-senha" required>
+                </fieldset>
+                <button type="submit" class="btn-primario">Entrar</button>
+                <span id="msg-login-erro" class="erro" aria-live="polite"></span>
+            </form>
+            <br>
+            <p style="text-align: center;">Não tem conta? <a href="./cadastro.html">Cadastre-se aqui</a></p>
+            <button id="btn-fechar-login" class="btn-secundario">Cancelar</button>
+        </dialog>
+
     </main>
-    <footer>
-        <p>&copy; 2026 Blog Culinário Sabor & Arte. Feito com semântica HTML.</p>
-    </footer>
-    <script src="./app.js"></script>
+    <footer><p>&copy; 2026 Blog Sabor & Arte.</p></footer>
+    <script src="./src/app.js"></script>
 </body>
 </html>

@@ -294,10 +294,6 @@ code {
     border-right-color: var(--border);
   }
 }
-<<<<<<< HEAD
-=======
-/* style.css */
-/* Reset de Portabilidade e Acessibilidade */
 * {
     margin: 0;
     padding: 0;
@@ -440,4 +436,3 @@ footer {
     padding: 1rem;
     margin-top: auto;
 }
->>>>>>> f9bed3f92f5e79b0b01cc5dc1001aa444dcf427d
