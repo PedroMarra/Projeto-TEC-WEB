@@ -647,3 +647,44 @@ footer {
   padding: 1rem;
   margin-top: auto;
 }
+
+/* =========================================
+   CORREÇÃO: MODO ESCURO (Dark Mode)
+   ========================================= */
+@media (prefers-color-scheme: dark) {
+    /* Fundo geral da página e texto */
+    body {
+        background-color: #121212;
+        color: #ecf0f1;
+    }
+
+    /* Modais, Formulários e Cards acompanham o modo escuro */
+    dialog, form, article.receita-card {
+        background-color: #1e1e24; /* Fundo escuro suave */
+        color: #ecf0f1; /* Texto claro para dar contraste */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    /* Linha divisória da modal */
+    dialog header {
+        border-bottom: 2px solid #333;
+    }
+
+    /* Inputs e Textareas legíveis */
+    input, textarea {
+        background-color: #2b2b36; /* Fundo do campo de texto escuro */
+        color: #ffffff; /* Letra digitada branca */
+        border: 1px solid #444;
+    }
+
+    /* Foco no input no modo escuro */
+    input:focus, textarea:focus {
+        border-color: #d35400;
+        background-color: #353542;
+    }
+
+    /* Garante que as labels sempre fiquem claras */
+    label {
+        color: #ecf0f1;
+    }
+}
