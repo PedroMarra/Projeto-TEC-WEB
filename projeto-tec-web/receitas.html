@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Sabor & Arte | Receitas</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sabor & Arte</h1>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./receitas.html" aria-current="page">Ver Receitas</a></li>
+                <li id="area-logout-nav" style="display: none;">
+                    <button id="btn-logout">Sair</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Caderno de Receitas Públicas</h2>
+            
+            <p id="aviso-login-receita" style="color: #d35400; font-weight: bold;">
+                ⚠️ Você precisa estar logado para adicionar uma nova receita. Vá para a página inicial para entrar.
+            </p>
+            <button id="btn-nova-receita" class="btn-primario" style="margin-bottom: 2rem;">+ Adicionar Nova Receita</button>
+            
+            <ul id="lista-receitas" aria-label="Lista de receitas"></ul>
+        </section>
+
+        <dialog id="modal-receita" aria-label="Modal Nova Receita">
+            <header>
+                <h2>Sua Nova Receita</h2>
+            </header>
+            <form id="form-receita">
+                <fieldset>
+                    <label for="rec-titulo">Nome do Prato:</label>
+                    <input type="text" id="rec-titulo" required>
+                </fieldset>
+                <fieldset>
+                    <label for="rec-ingredientes">Ingredientes:</label>
+                    <textarea id="rec-ingredientes" rows="3" required></textarea>
+                </fieldset>
+                <button type="submit" class="btn-primario">Publicar Receita</button>
+            </form>
+            <button id="btn-fechar-receita" class="btn-secundario">Cancelar</button>
+        </dialog>
+
+    </main>
+    <footer><p>&copy; 2026 Blog Sabor & Arte.</p></footer>
+    <script src="./src/app.js"></script>
+</body>
+</html>
