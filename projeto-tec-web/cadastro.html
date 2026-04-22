@@ -3,50 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Sabor & Arte | Nova Receita</title>
-    <link rel="stylesheet" href="./src/style.css">
+    <title>Blog Sabor & Arte | Criar Conta</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <h1>Sabor & Arte</h1>
         <nav aria-label="Navegação Principal">
             <ul>
-                <li><a href="./index.html">Página Inicial</a></li>
-                <li><a href="./cadastro.html" aria-current="page">Publicar Receita</a></li>
-                <li><a href="./receitas.html">Ver Receitas</a></li>
+                <li><a href="./index.html">Voltar ao Início</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Compartilhe sua Receita</h2>
-            <p>Preencha os dados abaixo para adicionar um novo prato ao blog.</p>
+            <h2>Crie sua Conta de Chef</h2>
+            <p>Cadastre-se para poder publicar suas receitas na plataforma.</p>
             <br>
-            <form id="form-receita" aria-label="Formulário de cadastro de receita">
+            <form id="form-cadastro-usuario" aria-label="Formulário de cadastro de usuário">
                 <fieldset>
-                    <label for="titulo">Nome do Prato:</label>
-                    <input type="text" id="titulo" placeholder="Ex: Bolo de Cenoura" aria-required="true">
+                    <label for="reg-nome">Nome Completo:</label>
+                    <input type="text" id="reg-nome" required>
                 </fieldset>
-                
                 <fieldset>
-                    <label for="ingredientes">Ingredientes (Resumo):</label>
-                    <textarea id="ingredientes" rows="3" placeholder="Ex: 3 cenouras, 4 ovos, farinha..." aria-required="true"></textarea>
+                    <label for="reg-email">E-mail:</label>
+                    <input type="email" id="reg-email" required>
                 </fieldset>
-
                 <fieldset>
-                    <label for="tempo">Tempo de Preparo (em minutos):</label>
-                    <input type="number" id="tempo" placeholder="Ex: 45" aria-required="true">
+                    <label for="reg-senha">Crie uma Senha:</label>
+                    <input type="password" id="reg-senha" required minlength="4">
                 </fieldset>
 
-                <button type="submit">Publicar Receita</button>
-                
-                <span id="mensagem-status" aria-live="polite"></span>
+                <button type="submit" class="btn-primario">Cadastrar Usuário</button>
+                <span id="msg-reg-status" aria-live="polite"></span>
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Blog Culinário Sabor & Arte. Feito com semântica HTML.</p>
-    </footer>
-    <script src="./src/app.js"></script>
+    <footer><p>&copy; 2026 Blog Sabor & Arte.</p></footer>
+    <script src="./app.js"></script>
 </body>
 </html>
