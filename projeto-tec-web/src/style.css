@@ -436,3 +436,54 @@ footer {
     padding: 1rem;
     margin-top: auto;
 }
+
+/* style.css */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+body { background-color: #faf8f5; color: #2c1e16; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+
+header { background-color: #d35400; color: #ffffff; padding: 1.5rem; text-align: center; }
+
+nav ul { list-style: none; margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+nav a, nav button { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 1.1rem; padding: 0.5rem; border-radius: 4px; background: none; border: none; cursor: pointer; }
+nav a:hover, nav button:hover { background-color: #e67e22; outline: 3px solid #ffffff; }
+
+main { flex: 1; width: 100%; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+
+form { background: #ffffff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+fieldset { border: none; margin-bottom: 1.5rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+input, textarea { width: 100%; padding: 0.8rem; border: 2px solid #ccc; border-radius: 4px; font-size: 1rem; }
+input:focus, textarea:focus { border-color: #d35400; outline: none; }
+
+button.btn-primario { background-color: #27ae60; color: white; font-size: 1.1rem; font-weight: bold; padding: 0.8rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 1rem; }
+button.btn-primario:hover { background-color: #219653; }
+button.btn-secundario { background-color: #7f8c8d; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer; margin-top: 1rem; width: 100%;}
+
+.erro { color: #c0392b; display: block; margin-top: 1rem; font-weight: bold; text-align: center; }
+.sucesso { color: #27ae60; display: block; margin-top: 1rem; font-weight: bold; text-align: center; }
+
+/* MODAL (<dialog>) SEM DIVS */
+dialog {
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px); /* Deixa o fundo desfocado */
+}
+dialog header { background: none; color: #2c1e16; padding: 0 0 1rem 0; text-align: left; border-bottom: 2px solid #eee; margin-bottom: 1rem; }
+dialog h2 { color: #d35400; }
+
+/* Lista de Receitas */
+#lista-receitas { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+article.receita-card { background: #ffffff; padding: 1.5rem; border-left: 6px solid #d35400; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+article.receita-card h3 { color: #d35400; margin-bottom: 0.5rem; }
+.autor-tag { font-size: 0.85rem; color: #7f8c8d; font-style: italic; }
+
+footer { background: #2c1e16; color: #ecf0f1; text-align: center; padding: 1rem; margin-top: auto; }
