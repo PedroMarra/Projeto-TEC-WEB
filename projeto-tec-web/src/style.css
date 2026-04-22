@@ -36,7 +36,7 @@
   }
 }
 
-/* DARK MODE CORRIGIDO - COM LABELS BRANCAS */
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #cbd5e1;
@@ -69,12 +69,12 @@
     background-color: #1a0c04;
   }
 
-  /* CORREÇÃO DOS LABELS - FICAM BRANCOS */
+
   label {
     color: #f1f5f9 !important;
   }
 
-  /* Garantir que labels específicos do login fiquem brancos */
+
   #form-login label,
   [for="login-email"],
   [for="login-senha"],
@@ -418,7 +418,7 @@ code {
   border-right-color: var(--border);
 }
 
-/* Reset base */
+
 * {
   margin: 0;
   padding: 0;
@@ -426,7 +426,7 @@ code {
   font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
-/* Cabeçalho e Navegação */
+
 header {
   background-color: #d35400;
   color: #ffffff;
@@ -460,7 +460,7 @@ nav a:hover, nav button:hover, nav a:focus-visible, nav button:focus-visible {
   outline: 3px solid #ffffff;
 }
 
-/* Corpo Principal */
+
 main {
   flex: 1;
   width: 100%;
@@ -469,7 +469,7 @@ main {
   padding: 0 1rem;
 }
 
-/* Formulário */
+
 form {
   background: #ffffff;
   padding: 2rem;
@@ -502,7 +502,7 @@ input:focus, textarea:focus {
   outline: none;
 }
 
-/* Botões */
+
 button {
   background-color: #27ae60;
   color: white;
@@ -553,7 +553,7 @@ button.btn-secundario:hover, button.btn-secundario:focus-visible {
   background-color: #6c7a7a;
 }
 
-/* Mensagens */
+
 #mensagem-status {
   display: block;
   margin-top: 1rem;
@@ -577,7 +577,6 @@ button.btn-secundario:hover, button.btn-secundario:focus-visible {
   text-align: center;
 }
 
-/* MODAL (dialog) - LEGÍVEL EM AMBOS OS MODOS */
 dialog {
   margin: auto;
   padding: 2rem;
@@ -612,7 +611,7 @@ dialog p {
   color: inherit;
 }
 
-/* Lista de Receitas */
+
 #lista-receitas {
   list-style: none;
   display: flex;
@@ -639,7 +638,7 @@ article.receita-card h3 {
   font-style: italic;
 }
 
-/* Footer */
+
 footer {
   background: #2c1e16;
   color: #ecf0f1;
@@ -648,42 +647,40 @@ footer {
   margin-top: auto;
 }
 
-/* =========================================
-   CORREÇÃO: MODO ESCURO (Dark Mode)
-   ========================================= */
+
 @media (prefers-color-scheme: dark) {
-    /* Fundo geral da página e texto */
+    
     body {
         background-color: #121212;
         color: #ecf0f1;
     }
 
-    /* Modais, Formulários e Cards acompanham o modo escuro */
+   
     dialog, form, article.receita-card {
-        background-color: #1e1e24; /* Fundo escuro suave */
-        color: #ecf0f1; /* Texto claro para dar contraste */
+        background-color: #1e1e24; 
+        color: #ecf0f1; 
         box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
-    /* Linha divisória da modal */
+  
     dialog header {
         border-bottom: 2px solid #333;
     }
 
-    /* Inputs e Textareas legíveis */
+   
     input, textarea {
-        background-color: #2b2b36; /* Fundo do campo de texto escuro */
-        color: #ffffff; /* Letra digitada branca */
+        background-color: #2b2b36; 
+        color: #ffffff; 
         border: 1px solid #444;
     }
 
-    /* Foco no input no modo escuro */
+   
     input:focus, textarea:focus {
         border-color: #d35400;
         background-color: #353542;
     }
 
-    /* Garante que as labels sempre fiquem claras */
+ 
     label {
         color: #ecf0f1;
     }
